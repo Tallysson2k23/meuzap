@@ -1,6 +1,6 @@
 // firebaseConfig.ts
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { getAuth } from 'firebase/auth'; // 🔄 Corrigido aqui
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -14,9 +14,9 @@ const firebaseConfig = {
   measurementId: "G-ENWJJ629K3"
 };
 
-// Inicializa o Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = getAuth(app);        // 🔄 Sem getReactNativePersistence
 const db = getFirestore(app);
 
 export { auth, db };
